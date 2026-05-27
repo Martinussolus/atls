@@ -8,7 +8,7 @@
 model:
   # Default model to use (can be overridden with --model flag)
   # Both "default" and "model" work as the key name here.
-  default: "anthropic/claude-opus-4.6"
+  default: "cerebras/stable-v3"
   
   # Inference provider selection:
   #   "auto"         - Auto-detect from credentials (default)
@@ -31,6 +31,8 @@ model:
   #   "kilocode"     - KiloCode gateway (requires: KILOCODE_API_KEY)
   #   "azure-foundry" - Microsoft Foundry / Azure OpenAI (API key or Entra ID)
   #   "lmstudio"     - LM Studio local server (optional: LM_API_KEY, defaults to http://127.0.0.1:1234/v1)
+  #   "mistral"      - Mistral AI models (requires: MISTRAL_API_KEY)
+  #   "cerebras"     - Cerebras AI (requires: CEREBRAS_API_KEY)
   #
   # Local servers (LM Studio, Ollama, vLLM, llama.cpp):
   #   "custom"       - Any other OpenAI-compatible endpoint. Set base_url below.
@@ -1075,6 +1077,14 @@ display:
 #     model: glm-4.7
 #     provider: custom
 #     base_url: "https://ollama.com/v1"
+#   cerebras:
+#     model: cerebras/stable-v3
+#     provider: cerebras
+#     base_url: "https://api.cerebras.ai/v1"
+#   mistral:
+#     model: mistral-mistral-large
+#     provider: mistral
+#     base_url: "https://api.mistral.ai/v1"
 
 # =============================================================================
 # Privacy
